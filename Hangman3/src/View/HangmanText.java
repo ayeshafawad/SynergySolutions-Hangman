@@ -71,7 +71,7 @@ public class HangmanText {
                 temp = game1.statusOfGame().get("Progress"); 
 
                 for (int x = 0; x < temp.size(); x++)  
-                        System.out.print(temp.get(x)); 
+                        System.out.print(temp.get(x)+" "); 
                 System.out.println(""); 
 
         }while(game1.isGameOver() == null);
