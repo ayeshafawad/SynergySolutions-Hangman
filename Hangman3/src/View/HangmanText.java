@@ -26,18 +26,17 @@ public class HangmanText {
     {
         Scanner sc = new Scanner(System.in); 
         Game game1 = new Game(); 
-        String player1 = "Player 1";
         String playername = "Player 2";
         System.out.println("Welcome to Hangman!"+'\n'); 
 
         //player 1 chooses name
         System.out.print("Choose your name Player 1: "); 
         playername = sc.nextLine();
-        game1.p1.setName(playername != null ? playername : "Player 1");
+        game1.p1.setName(playername.equals("") ? "Player 1" : playername);
         // player 2 chooses name
         System.out.print("Choose your name Player 2: "); 
         playername = sc.nextLine();
-        game1.p2.setName(playername == "" ? "Player 2" : playername);
+        game1.p2.setName(playername.equals("") ? "Player 2" : playername);
         System.out.print(game1.p1.getName() + ", enter secret word: "); 
         game1.setWord(sc.nextLine().trim());
 
